@@ -13,8 +13,9 @@
     </ion-card-header>
 
     <ion-card-content>
-    <ion-label *ngFor="let comment of post.comments">
-    </ion-label>
+    <ion-card *ngFor="let comment of post.comments">
+      <p>Comentario: {{comment.body}}</p>
+    </ion-card>
     </ion-card-content>
     <ion-button color="danger" (click)="deletePost(post.id)">Eliminar</ion-button>
   </ion-card>
